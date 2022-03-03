@@ -20,7 +20,8 @@
         <profile>
             <id>_default</id>
             <modules>
-
+                <module>simple-microservice-a</module>
+                <module>simple-microservice-b</module>
             </modules>
             <activation>
                 <activeByDefault>true</activeByDefault>
