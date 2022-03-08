@@ -8,3 +8,11 @@ target/*
 /*/.mvn/*
 /*/target/*
 /*/*.iml
+
+/*/node_modules/*
+/*/build/*
+/*/coverage/*
+/*/npm-debug.log*
+/*/yarn-debug.log*
+/*/yarn-error.log*
+
