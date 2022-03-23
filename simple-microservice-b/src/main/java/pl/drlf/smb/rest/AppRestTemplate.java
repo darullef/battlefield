@@ -1,12 +1,9 @@
-package pl.drlf.smb;
+package pl.drlf.smb.rest;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.web.util.UriComponentsBuilder;
-import pl.drlf.smb.dto.NumbersDTO;
-import pl.drlf.smb.dto.ResultDTO;
 
 import java.net.URI;
 
@@ -14,28 +11,9 @@ import java.net.URI;
 @Component
 public class AppRestTemplate
 {
-    private static final String MSA_ULR = "http://localhost:8081/api/msa";
     private RestTemplate restTemplate;
 
-    public ResultDTO getDivisionResult(String url)
-    {
-        URI methodUri = UriComponentsBuilder.fromHttpUrl(MSA_ULR + url)
-            .buildAndExpand()
-            .toUri();
-
-        return get(methodUri, ResultDTO.class);
-    }
-
-    public ResultDTO getAdditionResult(String url, NumbersDTO numbersDTO)
-    {
-        URI methodUri = UriComponentsBuilder.fromHttpUrl(MSA_ULR + url)
-            .buildAndExpand()
-            .toUri();
-
-       return post(methodUri, numbersDTO, ResultDTO.class);
-    }
-
-    <R> R get(URI uri, Class<R> responseClass)
+    public <R> R get(URI uri, Class<R> responseClass)
     {
         try
         {
@@ -49,7 +27,7 @@ public class AppRestTemplate
         }
     }
 
-    <T, R> R post(URI uri, T requestParam, Class<R> responseClass)
+    public <T, R> R post(URI uri, T requestParam, Class<R> responseClass)
     {
         try
         {
