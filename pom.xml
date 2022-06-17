@@ -24,6 +24,7 @@
         <profile>
             <id>_default</id>
             <modules>
+                <module>multi-threads-training</module>
                 <module>simple-microservice-a</module>
                 <module>simple-microservice-b</module>
             </modules>
