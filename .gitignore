@@ -8,6 +8,7 @@ target/*
 /*/.mvn/*
 /*/target/*
 /*/*.iml
+*.iml
 
 /*/node_modules/*
 /*/build/*
