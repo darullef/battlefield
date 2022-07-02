@@ -1,6 +1,6 @@
 package consumer_producer.car_factory;
 
-public class CarFactory
+public class CarFactoryMain
 {
     public static void main(String[] args)
     {
